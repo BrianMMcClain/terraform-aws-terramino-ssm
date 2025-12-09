@@ -18,7 +18,7 @@ resource "aws_iam_policy" "redis_read_ssm" {
 }
 
 resource "aws_iam_role" "redis_read_ssm" {
-  name = "app-ec2-role"
+  name = "${var.waypoint_application}-redis-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
